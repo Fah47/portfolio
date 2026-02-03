@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --font-syne: "Syne", sans-serif;
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+  --color-brand: #2563eb;
+  --color-brand-light: #dbeafe;
+  --color-dark: #1A1A1A;
+  --color-muted: #71717a;
+  --color-surface: #FDFDFD;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    /* ปรับขนาดฟอนต์พื้นฐานให้เล็กลงเล็กน้อยสำหรับจอเล็กสุด (iPhone SE) */
+    font-size: 14px;
+  }
+
+  /* ปรับขนาดฟอนต์กลับมาเป็นมาตรฐานสำหรับ iPad และ Desktop */
+  @media (min-width: 768px) {
+    html { font-size: 16px; }
+  }
+
+  body {
+    @apply bg-surface text-dark antialiased;
+    max-width: 100vw;
+    overflow-x: hidden;
+    font-family: var(--font-jakarta);
+    line-height: 1.5; /* กระชับบรรทัดขึ้นเล็กน้อยเพื่อให้เหมาะกับจอเล็ก */
+  }
+
+  /* Typography: ใช้ความหนาและจังหวะที่ทันสมัย */
+  h1, h2, h3, h4, .font-syne {
+    font-family: var(--font-syne);
+    @apply tracking-tighter leading-tight;
+  }
+
+  ::selection {
+    background-color: var(--color-brand);
+    color: white;
+  }
+}
+
+@layer utilities {
+  /* ปรับปรุงระบบ Grid สำหรับ Bento Box ให้ยืดหยุ่น */
+  .bento-grid {
+    @apply grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6;
+  }
+
+  /* คลาสสำหรับการทำ Responsive Padding ที่สมดุล */
+  .section-padding {
+    @apply px-5 sm:px-10 md:px-16 lg:px-24 py-12 md:py-24;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Custom Scrollbar สำหรับ Desktop เท่านั้น เพื่อไม่ให้กวนใจบนมือถือ */
+  @media (min-width: 1024px) {
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: var(--color-brand);
+      border-radius: 10px;
+    }
+  }
+
+  /* ซ่อน Scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
