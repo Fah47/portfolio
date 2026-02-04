@@ -10,14 +10,14 @@
           <span class="text-[10px] md:text-xs font-black italic tracking-tighter">PS</span>
         </div>
         <span class="text-base sm:text-lg md:text-xl font-bold tracking-tighter italic font-syne group-hover:text-blue-600 transition-all duration-500 uppercase">
-          PATCHA<span class="hidden xs:inline">RAPHAN</span> S<span class="text-blue-600 not-italic">.</span>
+          PATCHARAPHAN<span class="hidden xs:inline"></span> S<span class="text-blue-600 not-italic">.</span>
         </span>
       </router-link>
 
       <div class="flex gap-4 sm:gap-8 md:gap-12 font-bold uppercase text-[9px] md:text-[10px] tracking-[0.2em] md:tracking-[0.3em]">
         <router-link to="/" class="nav-link" active-class="active">HOME</router-link>
         <router-link to="/about" class="nav-link" active-class="active">ABOUT</router-link>
-        <router-link to="/resume" class="nav-link" active-class="active">RESUME</router-link>
+        <a href="/Resume.pdf" target="_blank" class="nav-link">RESUME</a>
       </div>
     </nav>
 
@@ -48,9 +48,6 @@
       <div class="flex flex-wrap justify-center items-center gap-6 md:gap-8 text-[9px] md:text-[10px] font-black uppercase tracking-widest text-gray-400 order-1 md:order-2">
         <a href="https://www.facebook.com/..." target="_blank" class="hover:text-blue-600 transition-all flex items-center gap-1.5 group">
           Facebook <span class="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
-        </a>
-        <a href="mailto:patcharaphan81@gmail.com" class="hover:text-blue-600 transition-all flex items-center gap-1.5 group">
-          Email <span class="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
         </a>
         <a href="https://linktr.ee/patcharaphan" target="_blank" class="hover:text-blue-600 transition-all flex items-center gap-1.5 group">
           Linktree <span class="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
