@@ -10,7 +10,7 @@
           <span class="text-[10px] md:text-xs font-black italic tracking-tighter">PS</span>
         </div>
         <span class="text-base sm:text-lg md:text-xl font-bold tracking-tighter italic font-syne group-hover:text-blue-600 transition-all duration-500 uppercase">
-          PATCHARAPHAN<span class="hidden xs:inline"></span> S<span class="text-blue-600 not-italic">.</span>
+          PATCHARAPHAN<span class="hidden xs:inline"></span> <span class="text-blue-600 not-italic">.</span>
         </span>
       </router-link>
 
@@ -40,17 +40,14 @@
         </div>
         <div class="flex gap-3 text-[8px] md:text-[9px] font-bold text-gray-300 uppercase tracking-widest italic">
           <span>Software Engineer</span>
-          <span class="text-blue-600/30">•</span>
-          <span>UX/UI Designer</span>
+
         </div>
       </div>
       
-      <div class="flex flex-wrap justify-center items-center gap-6 md:gap-8 text-[9px] md:text-[10px] font-black uppercase tracking-widest text-gray-400 order-1 md:order-2">
-        <a href="https://www.facebook.com/..." target="_blank" class="hover:text-blue-600 transition-all flex items-center gap-1.5 group">
-          Facebook <span class="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
-        </a>
-        <a href="https://linktr.ee/patcharaphan" target="_blank" class="hover:text-blue-600 transition-all flex items-center gap-1.5 group">
-          Linktree <span class="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
+      <div class="flex flex-wrap justify-center items-center gap-6 md:gap-4 text-[9px] md:text-[10px] font-black uppercase tracking-widest text-gray-400 order-1 md:order-2">
+        
+        <a class="flex gap-3 text-[8px] md:text-[9px] font-bold text-gray-300 uppercase tracking-widest italic">
+          UX/UI Designer & Frontend Developer<span class="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></span>
         </a>
       </div>
     </footer>
@@ -58,14 +55,12 @@
 </template>
 
 <script setup>
-// สั่งให้เลื่อนขึ้นบนสุดทุกครั้งที่เปลี่ยนหน้าเพื่อ UX ที่ดี
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'instant' });
 };
 </script>
 
 <style>
-/* CSS ส่วนเดิมของคุณที่ปรับจูนความละเอียด */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Syne:wght@700;800&display=swap');
 
 :root {

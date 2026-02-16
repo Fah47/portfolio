@@ -56,16 +56,16 @@
     </section>
 
     <section
-      class="px-5 sm:px-10 md:px-16 lg:px-24 py-16 md:py-24 bg-[#F9F7F2] border-y border-black/5"
+      class="px-5 sm:px-10 md:px-16 lg:px-24 py-16 md:py-24 bg-[#F9F7F2] border-y border-black/5 overflow-hidden"
     >
       <div class="max-w-7xl mx-auto">
         <div class="mb-12 md:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div class="space-y-2">
-            <h4 class="text-[9px] font-black uppercase tracking-[0.4em] text-blue-600 italic">
+            <h4 class="text-[9px] font-black uppercase tracking-[0.3em] text-blue-600 italic">
               Core Workflow
             </h4>
             <h2
-              class="text-4xl md:text-5xl font-black tracking-tighter font-syne italic uppercase leading-none text-[#1A1A1A]"
+              class="text-[1.6rem] leading-[0.9] md:text-5xl font-black font-syne italic uppercase tracking-tighter break-words"
             >
               Methodology<span class="text-blue-600 not-italic">.</span>
             </h2>
@@ -78,9 +78,7 @@
             :key="i"
             class="p-8 bg-white border border-blue-600/5 rounded-[2rem] shadow-lg shadow-blue-600/5 flex flex-col items-start"
           >
-            <div
-              class="text-3xl font-syne italic font-black text-blue-600/25 mb-6 italic leading-none"
-            >
+            <div class="text-3xl font-syne italic font-black text-blue-600/25 mb-6 leading-none">
               0{{ i + 1 }}
             </div>
             <h4 class="text-xs font-black uppercase tracking-[0.2em] text-blue-600 mb-3 italic">
@@ -141,9 +139,17 @@
                   >
                     {{ p.title }}
                   </h3>
-                  <p class="text-[9px] font-black uppercase tracking-[0.3em] text-gray-400 italic">
-                    {{ p.company }}
-                  </p>
+                  <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                    <p
+                      class="text-[9px] font-black uppercase tracking-[0.3em] text-gray-400 italic"
+                    >
+                      {{ p.company }}
+                    </p>
+                    <span class="hidden sm:block text-gray-200 text-[8px]">|</span>
+                    <p class="text-[9px] font-bold uppercase tracking-widest text-blue-600 italic">
+                      {{ p.date }}
+                    </p>
+                  </div>
                 </div>
                 <p class="text-sm md:text-base text-gray-500 font-light leading-relaxed italic">
                   {{ p.description }}
@@ -152,7 +158,7 @@
                   <span
                     v-for="tag in p.tags.split('|')"
                     :key="tag"
-                    class="text-[8px] font-bold border border-black-500 px-3 py-1.5 rounded-full uppercase tracking-widest text-black-400 bg-white transition-all italic"
+                    class="text-[8px] font-bold border border-gray-100 px-3 py-1.5 rounded-full uppercase tracking-widest text-gray-500 bg-white transition-all italic"
                   >
                     {{ tag.trim() }}
                   </span>
@@ -231,7 +237,7 @@
             class="group relative overflow-hidden bg-white text-black rounded-full py-4 transition-all hover:bg-blue-600 hover:text-white active:scale-95 shadow-xl"
           >
             <span class="relative z-10 font-black uppercase tracking-widest text-[10px] italic"
-              >View more work</span
+              >More on Linktree</span
             >
           </a>
           <a
@@ -239,18 +245,18 @@
             target="_blank"
             class="group relative overflow-hidden border border-white/20 rounded-full py-4 transition-all hover:bg-white hover:text-black active:scale-95"
           >
-            <span class="relative z-10 font-black uppercase tracking-widest text-[10px] italic"
-              >RESUME</span
-            >
+            <span class="relative z-10 font-black uppercase tracking-widest text-[10px] italic">
+              RESUME
+            </span>
           </a>
         </div>
       </div>
     </footer>
   </div>
 </template>
-<script setup>
 
- const steps = [
+<script setup>
+const steps = [
   {
     title: 'Discovery',
     desc: 'Conducting user research and requirements gathering to identify pain points and define the product’s strategic direction.',
@@ -272,50 +278,57 @@
 const projects = [
   {
     id: '01',
-    title: 'KwunJAI Mini App',
+    title: 'KwunJAI MiniApp',
+    date: 'Nov 2025 — Feb 2026',
     image: '003.png',
     company: 'YimSiam Dot Com Co., Ltd.',
     description:
-      'A mobile-first HR management solution bridging modern Vue.js development with complex legacy backend systems for a seamless corporate experience.',
-    tags: ' UI/UX Design | Vue.js | Tailwind | LIFF API',
+      'Re-engineered a complex legacy HR system into a mobile-first LINE Mini App (LIFF). Focused on simplifying employee workflows, streamlining registration, and bridging the gap between sophisticated backend logic and intuitive user interfaces.',
+    tags: 'UX Research | UI Design | Vue.js | Tailwind CSS | LIFF API',
     link: 'https://www.figma.com/design/CUCIqAQVUA9RtbDqhYWC52/miniapp.kwunJAI?node-id=0-1',
-    secondaryLink: 'https://miniapp.kwunjai.com/',
-    primaryBtn: 'Figma', // ชื่อปุ่มที่ 1
-    secondaryBtn: 'Mini app', // ชื่อปุ่มที่ 2
+    secondaryLink:
+      'https://drive.google.com/file/d/1iBQz4WAhjLqrMxKjjv_m1cqLTe1r1hqE/view?usp=sharing',
+    primaryBtn: 'Figma',
+    secondaryBtn: 'Case Study',
   },
   {
     id: '02',
-    title: 'T Double',
+    title: 'T Double Online Marketplace',
+    date: 'July 2025 — Sep 2025',
     image: '002.png',
     company: 'University of Phayao',
     description:
       'A scalable digital marketplace tailored for small businesses, focusing on high usability and streamlined user navigation paths.',
     tags: 'UI/UX Design | Documentation | Scrum Methodology',
     link: 'https://www.figma.com/design/7g7X4lp5Y0gdZjzj1QsrM3/T-Double?node-id=81-247',
-    secondaryLink: 'https://docs.google.com/spreadsheets/d/14Rr2bzgWY3Y3-bUfWmDCAOAaEH_oAp2IANyi9oubHKA/edit?gid=0#gid=0',
+    secondaryLink:
+      'https://docs.google.com/spreadsheets/d/14Rr2bzgWY3Y3-bUfWmDCAOAaEH_oAp2IANyi9oubHKA/edit?gid=0#gid=0',
     primaryBtn: 'Figma',
     secondaryBtn: 'Scrum',
   },
   {
     id: '03',
-    title: 'MIXIT',
+    title: 'MIXIT Game Community System',
+    date: 'Jul 2024 — Sep 2024',
     image: '001.png',
     company: 'University of Phayao',
     description:
       'An inclusive digital marketplace for underrepresented groups, prioritizing high accessibility and intuitive navigation.',
     tags: 'UI/UX Design | Strategic Planning | Interactive Prototyping',
     link: 'https://www.figma.com/design/RJJF2JEhzm5VgvMXjqTQjh/MIXIT?node-id=0-1',
-    secondaryLink: 'https://docs.google.com/document/d/1FogpqtnejB7VyGeQyU-rPTnPnRfDoZ1oIqzqAucXAmw/edit?usp=sharing',
+    secondaryLink:
+      'https://docs.google.com/document/d/1FogpqtnejB7VyGeQyU-rPTnPnRfDoZ1oIqzqAucXAmw/edit?usp=sharing',
     primaryBtn: 'Figma',
     secondaryBtn: 'Proposal',
   },
   {
     id: '04',
     title: 'Second UP',
+    date: 'Dec 2023 — Mar 2024',
     image: '004.png',
     company: 'University of Phayao',
     description:
-      'Enhancing student commerce through high-usability interfaces and optimized feedback loops to ensure a frictionless transaction process.' ,
+      'Enhancing student commerce through high-usability interfaces and optimized feedback loops to ensure a frictionless transaction process.',
     tags: 'UX Flow | UI Design  | Userflow',
     link: 'https://www.figma.com/design/3SZYkN6RMDK4xFJxFWNT3E/Second-UP?node-id=54-178',
     primaryBtn: 'Figma',
@@ -325,6 +338,19 @@ const projects = [
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Syne:wght@400..800&display=swap');
+
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+.font-jakarta {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+}
+
 @keyframes slide-up {
   from {
     transform: translateY(40px);
@@ -339,7 +365,6 @@ const projects = [
   animation: slide-up 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Custom Scrollbar for Desktop */
 @media (min-width: 1024px) {
   ::-webkit-scrollbar {
     width: 5px;
