@@ -49,7 +49,7 @@
             class="text-gray-500 text-sm md:text-lg max-w-2xl leading-relaxed italic mx-auto lg:mx-0"
           >
             "I am currently a third-year Software Engineering student at the University of Phayao,
-            maintaining a cumulative GPA of 2.90. Throughout my academic journey, I have built a
+            maintaining a cumulative GPA of 2.93. Throughout my academic journey, I have built a
             foundation in Software Processes, Design Thinking, and Frontend Development. Beyond the
             classroom, I am gaining hands-on professional experience through the Work Integrated
             Learning (WIL) program as a UX/UI Designer & Frontend Developer Intern at YimSiam Dot
@@ -219,7 +219,7 @@ const education = [
     year: '2023 — Present',
     school: 'University of Phayao',
     degree: 'Software Engineering, School of ICT',
-    gpa: '2.90', // ดึงมาจาก Transcript
+    gpa: '2.93', // ดึงมาจาก Transcript
   },
   {
     year: '2020 — 2023',
